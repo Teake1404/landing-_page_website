@@ -1,0 +1,5 @@
+---
+deployment:
+ tasks:
+ - export DEPLOYPATH=/home/datawowa/public_html/FREEcourse
+ - /bin/cp index.html $DEPLOYPATH
