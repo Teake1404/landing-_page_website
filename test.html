@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page - Hero Banner</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Hero Banner Styling */
+        .hero-banner {
+            background: url('images/banner/1.jpg') no-repeat center center;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #333;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        /* Title Text Styling */
+        .hero-title {
+            font-size: 48px;
+            font-weight: bold;
+            color: #333333;
+            background-color: rgba(255, 255, 255, 0.8); /* Light background to make text stand out */
+            padding: 10px 20px;
+            border-radius: 10px;
+            border: 2px solid #333;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        /* Headline Styling */
+        .hero-headline {
+            font-size: 40px;
+            font-weight: bold;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        /* Subheadline Styling */
+        .hero-subheadline {
+            font-size: 24px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        /* CTA Button Styling */
+        .cta-button {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            background-color: #FFD966; /* Light beige color for the button */
+            padding: 15px 30px;
+            border-radius: 50px;
+            border: 2px solid #6A1B9A; /* Purple border around the button */
+            box-shadow: 5px 5px 0px #E57373; /* Red shadow effect */
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+        }
+
+                /* Middle Section Styling */
+        .middle-section {
+            background-color: #F2E9F3; /* Light lavender background color */
+            padding: 60px 20px;
+            display: flex;
+            justify-content: center;
+            color: #333;
+        }
+
+        .content-wrapper {
+            max-width: 1200px;
+            display: flex;
+            align-items: center;
+            padding-left: 150px; /* Create whitespace on the left */
+            gap: 40px;
+        }
+
+        /* Text Section Styling */
+        .text-section {
+            flex: 1;
+            text-align: left;
+        }
+
+        .middle-title {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .benefit-list {
+            list-style-type: disc;
+            padding-left: 20px;
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .benefit-list li {
+            margin-bottom: 10px;
+        }
+
+        /* CTA Button Styling */
+        .cta-button-middle {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            background-color: #FFD966;
+            padding: 15px 30px;
+            border-radius: 50px;
+            border: 2px solid #6A1B9A;
+            box-shadow: 5px 5px 0px #E57373;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+
+        .cta-button-middle:hover {
+            transform: scale(1.05);
+        }
+
+        /* Image Section Styling */
+        .image-section {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .image-section img {
+            max-width: 80%;
+            border: 2px solid #6A1B9A; /* Optional border for consistency */
+            border-radius: 5px;
+        }
+                /* Bottom Section Styling */
+        .bottom-section {
+            background-color: #F2E9F3; /* Light lavender background color */
+            padding: 60px 20px;
+            color: #333;
+            text-align: center;
+        }
+
+        /* Title Styling with Underline */
+        .bottom-title {
+            font-size: 32px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .bottom-title::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 3px;
+            background-color: #333;
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+        }
+
+        /* Subtitle Styling */
+        .bottom-subtitle {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        /* Benefit List Styling */
+        .benefit-list {
+            list-style: none;
+            padding: 0;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 0;
+            font-size: 18px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .check-icon {
+            color: #4CAF50; /* Green check icon color */
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
+        .value {
+            color: #333;
+            font-weight: bold;
+        }
+
+        /* Final Note Styling */
+        .final-note {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-top: 30px;
+        }
+                /* Subscription Section Styling */
+        .subscription-section {
+            background: url('images/form/1.jpg') no-repeat center center;
+            background-size: cover;
+            padding: 60px 20px;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+
+        .subscription-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6); /* Dark overlay for readability */
+            z-index: 1;
+        }
+
+        .subscription-title {
+            font-size: 32px;
+            font-weight: bold;
+            color: #3EE98D;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .subscription-text {
+            font-size: 18px;
+            color: #CCCCCC;
+            max-width: 600px;
+            margin: auto;
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 2;
+            line-height: 1.5;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .subscription-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .subscription-form input[type="text"],
+        .subscription-form input[type="email"] {
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .subscribe-button {
+            padding: 15px;
+            font-size: 18px;
+            color: white;
+            background-color: #3EE98D;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease;
+        }
+
+        .subscribe-button:hover {
+            background-color: #2CB377;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <!-- Hero Banner Section -->
+    <section class="hero-banner">
+        <!-- Title Text with Border -->
+        <div class="hero-title">Title Text arngt tofcht</div>
+
+        <!-- Headline -->
+        <h1 class="hero-headline">Headline arythgl &<br>yodvkl</h1>
+
+        <!-- Subheadline -->
+        <p class="hero-subheadline">Subheadline tidmcm<br>ofkgfyjge</p>
+
+        <!-- CTA Button -->
+        <a href="#subscription-form" class="cta-button">Access Now</a>
+    </section>
+
+    <!-- Middle Section -->
+    <section class="middle-section">
+        <div class="content-wrapper">
+            <!-- Text Section -->
+            <div class="text-section">
+                <h2 class="middle-title">SFJGTFKGHIT</h2>
+                <ul class="benefit-list">
+                    <li>tEFGBdgb</li>
+                    <li>fgirkdkd</li>
+                    <li>jfjdkslvdjgnv</li>
+                </ul>
+                <a href="#subscription-form" class="cta-button-middle">Access Now</a>
+            </div>
+
+            <!-- Image Placeholder Section -->
+            <div class="image-section">
+                <img src="images/middle/1.jpg" alt="Placeholder Image">
+            </div>
+        </div>
+    </section>
+    <!-- Bottom Section -->
+    <section class="bottom-section">
+        <h2 class="bottom-title">bottom-title</h2>
+        <p class="bottom-subtitle">bottom_subtitle fgtytgfugjgkgut</p>
+
+        <ul class="benefit-list">
+            <li class="benefit-item">
+                <span class="check-icon">✔</span> shfhgkglhlgjhjh 
+                <span class="value">value: priceless</span>
+            </li>
+            <li class="benefit-item">
+                <span class="check-icon">✔</span> shfhgkglhlgjhjh 
+                <span class="value">value: priceless</span>
+            </li>
+            <li class="benefit-item">
+                <span class="check-icon">✔</span> shfhgkglhlgjhjh 
+                <span class="value">value: priceless</span>
+            </li>
+            <li class="benefit-item">
+                <span class="check-icon">✔</span> shfhgkglhlgjhjh 
+                <span class="value">value: priceless</span>
+            </li>
+        </ul>
+
+        <p class="final-note">Yhflwnglkhlhll lhhjgjyigjkfl</p>
+    </section>
+        <!-- Subscription Form Section -->
+    <section class="subscription-section" id="subscription-form">
+        <h2 class="subscription-title">Stay Updated with A.I Insights</h2>
+        <p class="subscription-text">Subscribe to receive updates, insights, and exclusive offers directly in your inbox.</p>
+
+        <div class="form-container">
+            <form class="subscription-form">
+                <div class="form-group">
+                    <input type="text" name="first-name" placeholder="First Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="last-name" placeholder="Last Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Email Address" required>
+                </div>
+                <button type="submit" class="subscribe-button">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+
+
+
+</body>
+</html>
